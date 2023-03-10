@@ -1,6 +1,6 @@
 import cv2
 
-videoCapture = cv2.VideoCapture(0)
+videoCapture =  cv2.VideoCapture("../videos/USA_Canada_Highlights.mp4")
 
 while True:
     ret, frame = videoCapture.read()
