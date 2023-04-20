@@ -6,7 +6,7 @@ from cvzone.ColorModule import ColorFinder
 videoCapture =  cv2.VideoCapture("../videos/USA_Canada_Highlights.mp4")
 
 hsvVals = {'hmin': 27, 'smin': 83, 'vmin': 50, 'hmax': 36, 'smax': 255, 'vmax': 202}
-ballColorFinder = ColorFinder(True)
+ballColorFinder = ColorFinder(False)
 
 while True:
     ret, frame = videoCapture.read()
@@ -23,7 +23,7 @@ while True:
     blur_contour = cv2.GaussianBlur(contour_black, (17, 17), 0)
 
     # rows = contour_black.shape[0]
-    # circles = cv2.HoughCircles(contour_black, cv2.HOUGH_GRADIENT, 1, rows / 8,
+    # circles = cv2.HoughCircles(contour_black, cv2.HOUGH_GRADIENT, 1, rows / 16,
     #                            param1=100, param2=30,
     #                            minRadius=1, maxRadius=300)
     
